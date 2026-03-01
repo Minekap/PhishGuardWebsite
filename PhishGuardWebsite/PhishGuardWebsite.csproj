@@ -67,9 +67,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AdminDashboard.aspx" />
+    <Content Include="Admin\CSS\Example1.css" />
+    <Content Include="Admin\Image\background.png" />
+    <Content Include="App_Data\PhishGuard.mdf" />
+    <Content Include="App_Data\PhishGuard_log.ldf">
+      <DependentUpon>PhishGuard.mdf</DependentUpon>
+    </Content>
+    <Content Include="Member\CSS\example.css" />
+    <Content Include="Member\Image\background.png" />
+    <Content Include="Member\MemberDashboard.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\MemberDashboard.aspx.cs">
+      <DependentUpon>MemberDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\MemberDashboard.aspx.designer.cs">
+      <DependentUpon>MemberDashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +105,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
